@@ -50,7 +50,7 @@ public class Activity_Menu extends AppCompatActivity {
                 String url = Activity_Menu.this.getString(R.string.url);
                 String data = Activity_Menu.getJSON(url);
                 Log.d("pttt", data);
-                if (data != null) {
+                if (data != null && menu_EDT_id.getText().toString().length() == 9) {
                     Activity_Menu activity_Menu = Activity_Menu.this;
                     activity_Menu.startGame(activity_Menu.menu_EDT_id.getText().toString(), data);
                 }
